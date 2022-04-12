@@ -3,7 +3,8 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  /* font-family: "Roboto", sans-serif; */
+  font-family: "Inter",sans-serif;
   overflow: hidden;
 }
 
@@ -16,7 +17,7 @@
   font-size: 20px;
 }
 
-.navbar--logo{
+.navbar--logo {
   display: flex;
   align-items: center;
   margin: 0 2rem;
@@ -31,7 +32,7 @@ li {
   flex-direction: row;
 }
 
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
@@ -40,16 +41,18 @@ a{
   margin: 0 1rem;
   display: flex;
   align-items: center;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-.items :hover{
-  color: rgb(233, 223, 223);
+.items:hover {
+  opacity: 0.5;
+  transform: scale(1.1);
 }
 
 .container {
   height: calc(100vh - 70px);
   position: relative;
+  /* background-color: aqua; */
 }
 
 .intro {
@@ -118,9 +121,12 @@ a{
   }
 }
 
-.footer{
+.footer {
   /* Maybe this is wrong. IDK */
   height: 150px;
+  bottom: 2rem;
+  position: absolute;
+  left: 39%;
 }
 
 .button-links {
@@ -129,15 +135,13 @@ a{
   align-items: center;
 }
 
-.social-links{
+.social-links {
   display: flex;
   flex-direction: row;
   margin: 5rem;
-
 }
 
-.social-link-item{
+.social-link-item {
   margin: 1rem;
 }
-
 

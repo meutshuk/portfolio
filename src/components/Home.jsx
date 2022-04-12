@@ -3,11 +3,16 @@ import Navbar from "./Navbar";
 import "./home.css";
 import resume from "../Utshuk's Resume.pdf";
 import Footer from "./Footer";
+import TagSphere from "./TagSphere.tsx";
+
+import Particles from "react-tsparticles";
+import config from "./config/particleConfig";
 
 export default function Home() {
   return (
     <div>
       <Navbar />
+      <Particles params={config} />
       <div className="container">
         <div className="intro">
           <div className="i-left">
@@ -29,15 +34,17 @@ export default function Home() {
             </div>
           </div>
           <div className="i-right">
-            <div className="i-right-wrapper"></div>
+            <div className="i-right-wrapper">
+              <TagSphere />
+            </div>
           </div>
         </div>
         <div className="button-links">
-          <a class="fancy" href={resume} target="_blank" rel="noreferrer">
-            <span class="top-key"></span>
-            <span class="text">Resume</span>
-            <span class="bottom-key-1"></span>
-            <span class="bottom-key-2"></span>
+          <a className="fancy" href={resume} target="_blank" rel="noreferrer">
+            <span className="top-key"></span>
+            <span className="text">Resume</span>
+            <span className="bottom-key-1"></span>
+            <span className="bottom-key-2"></span>
           </a>
           <Footer />
         </div>
