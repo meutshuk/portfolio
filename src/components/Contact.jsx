@@ -1,11 +1,11 @@
 import React, { useRef, useState } from "react";
 import Navbar from "./Navbar";
-import "./contact.css";
 import "./contact-button.css";
 import Footer from "./Footer";
 import Email from "../images/newsletter.png";
 import Phone from "../images/phone.png";
 import Address from "../images/address.png";
+import background from "../images/bg.jpg";
 
 import emailjs from "@emailjs/browser";
 
@@ -37,46 +37,76 @@ export default function Contact() {
   return (
     <div>
       <Navbar />
-      <img className="img" src="https://api.mapbox.com/styles/v1/mapbox/dark-v10/static/151.0475,-33.9137,10.38,339,6/1280x900?access_token=pk.eyJ1IjoidXRzaHVrcmFqIiwiYSI6ImNsMXU5bnFidzBuNjYzYnF2d3hjYWoyaHkifQ.PA6KrC-v7bSI5z37uFcmyQ" alt="" />
-      <div className="container">
-        <div className="contact">
-          <div className="contact-left">
-            {/* <h1 className="c-title">
-                Fill the Form.
-                <br /> Its Easy
-              </h1> */}
-            <form id="myForm" ref={formRef} onSubmit={handleSubmit}>
-              <input type="text" placeholder="First Name" name="user-first" />
-              <input type="text" placeholder="Last Name" name="user-last" />
-              <input type="text" placeholder="Subject" name="user-subject" />
-              <input type="text" placeholder="Email" name="user-email" />
-              <textarea rows="5" placeholder="" name="message" />
-              <button className="btn"> Submit</button>
+      <img
+        className="w-full h-full fixed -z-50"
+        src="https://api.mapbox.com/styles/v1/mapbox/light-v10/static/151.1941,-33.899,11.44,0/1280x909@2x?access_token=pk.eyJ1IjoidXRzaHVrcmFqIiwiYSI6ImNsMXhocHkyZTAyemUzbGxhbmNnNzdhZXEifQ.uKIe0hFC2tJPXcx3K6LVbw"
+        // src={background}
+        alt=""
+      />
+      <div className="flex flex-row justify-center">
+        <div className="flex">
+          <div className="flex-1 flex items-center flex-col mt-12">
+            <form
+              id="myForm"
+              className="mt-5"
+              ref={formRef}
+              onSubmit={handleSubmit}
+            >
+              <input
+                className="w-[50%] h-[50px] border-0 my-3 mx-40 text-sm pl-4 rounded-xl bg-lime-200 placeholder:text-purple-600"
+                type="text"
+                placeholder="First Name"
+                name="user-first"
+              />
+              <input
+                className="w-[50%] h-[50px] border-0 my-3 mx-40  text-sm pl-4 rounded-xl bg-lime-200 placeholder:text-purple-600"
+                type="text"
+                placeholder="Last Name"
+                name="user-last"
+              />
+              <input
+                className="w-[50%] h-[50px] border-0 my-3 mx-40  text-sm pl-4 rounded-xl bg-lime-200 placeholder:text-purple-600"
+                type="text"
+                placeholder="Subject"
+                name="user-subject"
+              />
+              <input
+                className="w-[50%] h-[50px] border-0 my-3 mx-40 text-sm pl-4 rounded-xl bg-lime-200 placeholder:text-purple-600"
+                type="text"
+                placeholder="Email"
+                name="user-email"
+              />
+              <textarea
+                className="w-[50%] h-[200px] my-3 mx-40 text-sm pl-4 rounded-xl bg-purple-200 placeholder:text-lime-600 p-2 placeholder:text-[16px]"
+                rows="5"
+                placeholder="Messages"
+                name="message"
+              />
+              <button className="btn my-3 mx-40"> Submit</button>
               {done && "Thankyou!!!"}
             </form>
           </div>
-          
-          <div className="contact-right">
-              
-            <div className="card">
-                <div className="contact-description">
-                  <b>Whats your story? </b>Get in touch. Always there for
-                  opportunities.
+
+          <div className="flex-1 mt-12">
+            <div className="bg-stone-400 w-96 text-white p-4 rounded-lg">
+              <div className="font-thin text-xl max-w-[300px] mb-4">
+                <b className="text-[22px]">Whats your story? </b>Get in touch.
+                Always there for opportunities.
+              </div>
+              <div className="c-info">
+                <div className="flex items-center font-light w-[70%]">
+                  <img src={Phone} alt="" className="w-8 h-8 mr-4" />
+                  <b>0415977112</b>
                 </div>
-                <div className="c-info">
-                  <div className="c-info-item">
-                    <img src={Phone} alt="" className="c-icon" />
-                    <b>0415977112</b>
-                  </div>
-                  <div className="c-info-item">
-                    <img src={Address} alt="" className="c-icon" />
-                    <b>Wollongong, NSW</b>
-                  </div>
-                  <div className="c-info-item">
-                    <img src={Email} alt="" className="c-icon" />
-                    <b>me.utshuk1001@gmail.com</b>
-                  </div>
+                <div className="flex items-center font-light w-[70%]">
+                  <img src={Address} alt="" className="w-8 h-8 mr-4" />
+                  <b>Wollongong, NSW</b>
                 </div>
+                <div className="flex items-center font-light w-[70%]">
+                  <img src={Email} alt="" className="w-8 h-8 mr-4" />
+                  <b>me.utshuk1001@gmail.com</b>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 const config = {
   background: {
     color: {
-      value: "#4a82d9",
+      value: "#d1d0b6",
     },
     position: "50% 50%",
     repeat: "no-repeat",

@@ -1,22 +1,37 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from '../images/logo.png'
+import logo from "../images/logo.png";
 
 export default function Navbar() {
   return (
-    <div className="navbar">
-      <div className="navbar--logo">
-          <img src={logo} alt="" height="50px" />
+    <div className=" h-[60px] bg-[#FF6B6B] flex flex-row justify-between text-xl items-center">
+      <div className="flex mx-8 h-9 w-10 ">
+        <img src={logo} alt="" height="50px" />
       </div>
-      <ul className="navbar--links">
-        <li className="items">
-          <Link to="/">Home</Link>
+      <ul className="flex flex-row mr-8">
+        <li className="p-4 flex items-center list-none">
+          <Link
+            className="transition-all ease-in-out hover:scale-110 hover:text-[#FFD93D] w-fit "
+            to="/"
+          >
+            Home
+          </Link>
         </li>
-        <li className="items">
-          <Link to="/projects">Projects</Link>
+        <li className="p-4 flex items-center">
+          <Link
+            className="transition-all ease-in-out hover:scale-110 hover:text-[#FFD93D] w-fit"
+            to="/projects"
+          >
+            Projects
+          </Link>
         </li>
-        <li className="items">
-          <Link to="/contact">Contact</Link>
+        <li className="p-4 flex items-center">
+          <Link
+            className="transition-all ease-in-out hover:scale-110 hover:text-[#FFD93D] w-fit"
+            to="/contact"
+          >
+            Contact
+          </Link>
         </li>
       </ul>
     </div>

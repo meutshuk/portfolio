@@ -25,11 +25,11 @@ const defaultStyles = {
   getContainer: (radius: number, fullWidth: boolean, fullHeight: boolean) =>
     ({
       position: "relative",
-      // width: fullWidth ? "100%" : `${2 * radius}px`,
+      width: fullWidth ? "100%" : `${2 * radius}px`,
       maxWidth: "100%",
       minHeight: `${2 * radius}px`,
-      // height: fullHeight ? "100%" : `${2 * radius}px`,
-      height: "100%",
+      height: fullHeight ? "100%" : `${2 * radius}px`,
+      maxHeight: "100%",
       touchAction: "none",
     } as CSSProperties),
 };
@@ -198,6 +198,7 @@ const defaultState: tagSphereProps = {
     />,
     <img src="https://cdn.svgporn.com/logos/c-sharp.svg" alt="C#" width={50} />,
     <img src="https://cdn.svgporn.com/logos/jest.svg" alt="Jest" width={50} />,
+    <img src="https://cdn.svgporn.com/logos/tailwindcss-icon.svg" alt="Tailwind" width={50} />,
   ],
   maxSpeed: 5,
   initialSpeed: 32,
