@@ -67,7 +67,7 @@ export default function Projects() {
     <div className="xl:h-screen h-full bg-purple-300">
       <Nav />
 
-      <div className=" pt-[60px]  grid xl:grid-cols-3 grid-cols-1 auto-rows-auto gap-x-4 gap-y-8 items-stretch md:grid-cols-2 justify-evenly content-evenly justify-items-center">
+      <div className=" py-20 px-10 grid xl:grid-cols-3 grid-cols-1 auto-rows-auto gap-x-4 gap-y-8 items-stretch md:grid-cols-2 justify-evenly content-evenly justify-items-center">
         {card}
       </div>
     </div>
