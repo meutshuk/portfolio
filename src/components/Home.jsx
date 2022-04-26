@@ -1,23 +1,25 @@
 import React from "react";
-import Navbar from "./Navbar";
 import "./resume-button.css";
 import Footer from "./Footer";
 import TagSphere from "./TagSphere.tsx";
 
 import Particles from "react-tsparticles";
 import config from "./config/particleConfig";
+import Nav from "../Nav";
 
 export default function Home() {
   return (
     <div className="">
-      <Navbar />
+      <Nav />
       <Particles params={config} />
-      <div className="container mx-auto h-[calc(100vh-60px)] overflow-hidden">
-        <div className="flex flex-column ">
+      <div className="container mx-auto h-screen xl:overflow-hidden ">
+        <div className="flex flex-col sm:flex-row">
           <div className="flex-1 flex md:w1/2">
             <div className="flex flex-col mt-48">
               <h2 className="text-2xl font-bold">Hello, My name is</h2>
-              <h1 className="gradient-text font-extrabold text-8xl">Utshuk Raj Dhamala</h1>
+              <h1 className="gradient-text font-extrabold text-8xl">
+                Utshuk Raj Dhamala
+              </h1>
               <div className="itruncate h-14 overflow-hidden">
                 <div className="h-[168px] animate-move overflow-visible">
                   <div className="h-14 text-3xl font-bold flex items-center text-[#FF6B6B]">
@@ -32,9 +34,13 @@ export default function Home() {
                 </div>
               </div>
               <div className="max-w-2xl h-screen font-medium text-xl mt-1 leading-relaxed">
-                A self-taught <span className="text-[#CE49BF] font-bold">Full-stack developer</span> located in Sydney, Australia
-                with strong growth and learning mindset, looking for a
-                opportunity to kickstart my career in Web development.
+                A self-taught{" "}
+                <span className="text-[#CE49BF] font-bold">
+                  Full-stack developer
+                </span>{" "}
+                located in Sydney, Australia with strong growth and learning
+                mindset, looking for a opportunity to kickstart my career in Web
+                development.
               </div>
             </div>
           </div>

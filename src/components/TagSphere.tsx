@@ -27,7 +27,7 @@ const defaultStyles = {
       position: "relative",
       width: fullWidth ? "100%" : `${2 * radius}px`,
       maxWidth: "100%",
-      minHeight: `${2 * radius}px`,
+      minHeight: `${1 * radius}px`,
       height: fullHeight ? "100%" : `${2 * radius}px`,
       maxHeight: "100%",
       touchAction: "none",
@@ -200,7 +200,7 @@ const defaultState: tagSphereProps = {
     <img src="https://cdn.svgporn.com/logos/jest.svg" alt="Jest" width={50} />,
     <img src="https://cdn.svgporn.com/logos/tailwindcss-icon.svg" alt="Tailwind" width={50} />,
   ],
-  maxSpeed: 5,
+  maxSpeed: 6,
   initialSpeed: 32,
   initialDirection: 135,
   keepRollingAfterMouseOut: true,
@@ -228,8 +228,9 @@ export default function TagSphere(props: any) {
     radius = texts.length * 25;
   }
 
-  const depth = 2 * radius;
-  const size = 1.5 * radius;
+  const depth = 1.5 * radius;
+  // const apple = full
+  const size = 1 * radius;
   const itemHooks = texts.map(() => createRef());
   const [items, setItems]: [any[], any] = useState([]);
 

@@ -5,9 +5,9 @@ import Footer from "./Footer";
 import Email from "../images/newsletter.png";
 import Phone from "../images/phone.png";
 import Address from "../images/address.png";
-import background from "../images/bg.jpg";
 
 import emailjs from "@emailjs/browser";
+import Nav from "../Nav";
 
 export default function Contact() {
   const formRef = useRef();
@@ -36,7 +36,7 @@ export default function Contact() {
   };
   return (
     <div>
-      <Navbar />
+      <Nav />
       <img
         className="w-full h-full fixed -z-50"
         src="https://api.mapbox.com/styles/v1/mapbox/light-v10/static/151.1941,-33.899,11.44,0/1280x909@2x?access_token=pk.eyJ1IjoidXRzaHVrcmFqIiwiYSI6ImNsMXhocHkyZTAyemUzbGxhbmNnNzdhZXEifQ.uKIe0hFC2tJPXcx3K6LVbw"
@@ -44,7 +44,7 @@ export default function Contact() {
         alt=""
       />
       <div className="flex flex-row justify-center">
-        <div className="flex">
+        <div className="flex flex-col sm:flex-row">
           <div className="flex-1 flex items-center flex-col mt-12">
             <form
               id="myForm"
